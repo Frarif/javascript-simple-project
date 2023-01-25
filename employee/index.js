@@ -12,13 +12,13 @@ const employeesData = [
 ];
 
 function seacrhEmployees(employees, keyword) {
-  const foundEmployees = employees.filter((employee) => {
-    return employee.name;
+  const foundStudents = employees.filter((employee) => {
+    return employee.name.toLowerCase().includes(keyword);
   });
-  return foundEmployees;
+  return foundStudents;
 }
 
-const foundEmployees = seacrhEmployees(employeesData);
+const foundEmployees = seacrhEmployees(employeesData, `a`);
 
 // LOGIN
 function runLogin() {
