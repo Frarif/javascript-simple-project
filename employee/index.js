@@ -17,13 +17,13 @@ const employeesData = [
   { nip: 15, name: "Dedi Suhendra", salary: 10000000 },
 ];
 
-function findHighestSalary(employees) {
+function findHighestSalaries(employees) {
   const salaryCountItems = employees.map((employee) => {
     return employee.salary;
   });
 
   let highest = 0;
-  let highestSalary = [];
+  let highestItems = [];
 
   salaryCountItems.forEach((salaryCount) => {
     if (salaryCount > highest) {
@@ -33,11 +33,29 @@ function findHighestSalary(employees) {
 
   salaryCountItems.forEach((salaryCount, index) => {
     if (salaryCount >= highest) {
-      highestSalary.push(index);
+      highestItems.push(index);
     }
   });
 
-  console.log({ highest, highestSalary });
+  const highestSalaries = highestItems.map((employee, index) => {
+    const salaryIndexToFind = highestItems[index];
+    return employeesData[salaryIndexToFind];
+  });
+
+  return highestSalaries;
 }
 
-console.log(findHighestSalary(employeesData));
+function displayHighestSalary(highestSalaryResult) {
+  const highestSalaryArray = highestSalaryResult.map((highestSalary) => {
+    return highestSalary.name;
+  });
+
+  const highestSalaryString = highestSalaryArray.join(` and `);
+
+  console.log(
+    `The employee with the highest salary are ${highestSalaryString}`
+  );
+}
+const highestSalaryResult = findHighestSalaries(employeesData);
+
+displayHighestSalary(highestSalaryResult);
