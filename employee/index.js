@@ -21,7 +21,23 @@ function findHighestSalary(employees) {
   const salaryCountItems = employees.map((employee) => {
     return employee.salary;
   });
-  console.log(salaryCountItems);
+
+  let highest = 0;
+  let highestSalary = [];
+
+  salaryCountItems.forEach((salaryCount) => {
+    if (salaryCount > highest) {
+      highest = salaryCount;
+    }
+  });
+
+  salaryCountItems.forEach((salaryCount, index) => {
+    if (salaryCount >= highest) {
+      highestSalary.push(index);
+    }
+  });
+
+  console.log({ highest, highestSalary });
 }
 
 console.log(findHighestSalary(employeesData));
