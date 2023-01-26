@@ -18,10 +18,10 @@ const employeesData = [
 ];
 
 function findHighestSalary(employees) {
-  const highestSalary = employees.splice((employee) => {
-    return employee.salary.length;
+  const salaryCountItems = employees.map((employee) => {
+    return employee.salary;
   });
-  console.log(highestSalary);
+  console.log(salaryCountItems);
 }
 
 console.log(findHighestSalary(employeesData));
