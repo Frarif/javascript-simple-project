@@ -53,7 +53,6 @@ function findHighestScore(students) {
   const scoreCountItems = students.map((student) => {
     return student.score;
   });
-  console.log(scoreCountItems);
 }
 
 findHighestScore(studentsDataItems);
