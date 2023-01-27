@@ -1,5 +1,5 @@
 // Search Employee
-const employeesData = [
+const studentsDataItems = [
   {
     no: 01,
     name: "Muhammad Ucok",
@@ -48,3 +48,12 @@ const employeesData = [
     score: [90, 80, 70, 90, 80, 90, 60, 80, 80],
   },
 ];
+
+function findHighestScore(students) {
+  const scoreCountItems = students.map((student) => {
+    return student.score;
+  });
+  console.log(scoreCountItems);
+}
+
+findHighestScore(studentsDataItems);
