@@ -49,10 +49,18 @@ const studentsDataItems = [
   },
 ];
 
-function findHighestScore(students) {
-  const scoreCountItems = students.map((student) => {
-    return student.score;
-  });
-}
+// function findHighestScore(students) {
+//   const scoreCountItems = students.map((student) => {
+//     return student.score;
+//   });
+//   console.log(scoreCountItems);
+// }
 
-findHighestScore(studentsDataItems);
+// findHighestScore(studentsDataItems);
+const sum = studentsDataItems
+  .map((studentsDataItems) => studentsDataItems.score)
+  .reduce((a, b) => a.concat(b), [])
+  .reduce((a, b) => a + b, 0);
+const average =
+  sum / studentsDataItems.length / studentsDataItems[0].score.length;
+console.log({ average });
