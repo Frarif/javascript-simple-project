@@ -22,6 +22,7 @@ if (age > 18 && registeredEarly !== false) {
   console.log(
     `You are ${age} years old. Your race starts at 11.00 and your race number is ${raceNumber}`
   );
+
   // Youth runners
 } else if (age < 18 && registeredEarly == false) {
   console.log(

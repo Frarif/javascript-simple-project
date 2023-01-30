@@ -1,10 +1,10 @@
 var userName = "Mika".toLowerCase();
 
-userName ? console.log(` Hello ${userName}!`) : console.log(`Hello`);
+userName ? console.log(`Hello ${userName}!`) : console.log(`Hello`);
 
-const userQuestion = "";
+const userQuestion = "Am I Good";
 
-console.log(`${userQuestion}`);
+console.log(`${userName} asked... ${userQuestion} ?`);
 
 const randomNumber = Math.floor(Math.random() * 8);
 
